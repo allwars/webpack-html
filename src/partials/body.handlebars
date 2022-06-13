@@ -1,0 +1,78 @@
+<div class="row">
+  {{#with first}}
+ {{#if bloquecenter}}
+    <div class="bloque center">
+      {{else}}
+      <div class="bloque izq">
+  {{/if}}
+      <p>{{texto}}</p>
+      <img
+        loading="lazy"
+        alt=""
+        src="https://www.lg.com/es/mp-resources/images/posventa/{{img}}"
+        class="img-fluid w-50 mx-auto d-block"
+      />
+    </div>
+    {{/with}}
+    <table class="table">
+      <thead>
+        <tr>
+           {{#each table.titulos}}
+          <th scope="col">{{texto}}</th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        {{#each table.content}}
+        <tr>
+          <td>{{programa}}</td>
+          <td>{{carga}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  
+    <div class="col-12">
+      <p></p>
+
+  <table class="table">
+      <thead>
+        {{#with table2}}
+        <tr>
+           {{#each titulos}}
+          <th scope="col">{{texto}}</th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>
+              <table class="table">
+                <tbody>
+        {{#each content}}
+        <tr>
+          <td>{{programa}}</td>
+          <td>{{carga}}</td>
+        </tr>
+               {{/each}}
+               </tbody>
+               </table>
+               </td>
+            <td>
+              <table class="table">
+                <tbody>
+        {{#each content}}
+        <tr>
+          <td>{{programa}}</td>
+          <td>{{carga}}</td>
+        </tr>
+               {{/each}}
+               </tbody>
+               </table>
+               </td>
+               </tr>
+        {{/with}}
+      </tbody>
+    </table>
+    </div>
+  </div>

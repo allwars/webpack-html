@@ -1,0 +1,19 @@
+$color-lg: #a50034;
+$bg-grey: #eeeeee;
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  .bloque{
+    display: flex;
+    &.center{
+      flex-direction: column;
+    align-content: center;
+    }
+    &.izq{
+      flex-direction: row-reverse;
+    }
+  }
+}
